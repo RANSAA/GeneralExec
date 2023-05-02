@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>参数说明</key>
+	<dict>
+		<key>sudo命令同时输入密码方式2：其中123是用户密码</key>
+		<string>sudo -S sntp -sS 182.92.12.11 &lt;&lt; EOF
+123
+EOF</string>
+		<key>sudo命令同时输入密码方式1：其中123是用户密码</key>
+		<string>echo &quot;123&quot; | sudo -S sntp -sS 182.92.12.11</string>
+		<key>mark</key>
+		<string>如果一个任务有多个命令可直接用；分割开</string>
+		<key>execPath</key>
+		<string>二进制可执行文件地址</string>
+		<key>logPath</key>
+		<string>日志自定义保存路径，如果为空则保存在/tmp/GeneralExec-&quot;App Name&quot;.log中</string>
+		<key>isBash</key>
+		<string>表示执行该程序是否需要借助Bash或者终端才能执行</string>
+		<key>args</key>
+		<string>二进制程序执行时附加参数</string>
+		<key>list</key>
+		<string>可以在list中添加shell命令，命令执行顺序：先加入先执行</string>
+		<key>isUseArgs</key>
+		<string>是否使用args中的参数</string>
+		<key>isUseExecPath</key>
+		<string>是否使用execPath路径</string>
+		<key>isUseList</key>
+		<string>是否使用list任务</string>
+		<key>isLogs</key>
+		<string>是否保存输出日志</string>
+		<key>isPipe</key>
+		<string>是否将调用的程序的输出重定向输入到log日志文件中</string>
+		<key>isAsync</key>
+		<string>是否使用异步执行任务。YES:所有任务并发执行并等待所有任务执行完毕后退出程序。 NO:所有任务依次执行，必须等待上一个任务执行完毕之后才继续执行新的的任务。所有任务执行完毕后才会退出程序。</string>
+	</dict>
+	<key>execPath</key>
+	<string>/Volumes/ExData/Applications/SDKManager/FFmpeg/binaries/5.1.2/ffplay</string>
+	<key>logPath</key>
+	<string></string>
+	<key>isBash</key>
+	<false/>
+	<key>isUseArgs</key>
+	<true/>
+	<key>isUseExecPath</key>
+	<true/>
+	<key>isUseList</key>
+	<true/>
+	<key>isLogs</key>
+	<true/>
+	<key>isPipe</key>
+	<true/>
+	<key>isAsync</key>
+	<true/>
+	<key>args</key>
+	<array>
+		<string>-seek_interval</string>
+		<string>1</string>
+		<string>-fast</string>
+	</array>
+	<key>list</key>
+	<array>
+		<string>ssh-add ~/.ssh/ctsfork-GitHub</string>
+		<string>ssh-add ~/.ssh/RANSAA-GitHub</string>
+	</array>
+</dict>
+</plist>
