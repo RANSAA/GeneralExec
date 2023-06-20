@@ -33,10 +33,17 @@ class Plist: NSObject {
     var isAsync:Bool{
         plist["isAsync"] as! Bool
     }
+    var isBinPath:Bool{
+        plist["isBinPath"] as! Bool
+    }
     
     var execPath:String{
         plist["execPath"] as! String
     }
+    var binPath:String{
+        plist["binPath"] as! String
+    }
+    
     var logPath:String{
         if let path = plist["logPath"] as? String, !path.isEmpty && path.hasPrefix("/") {
             return path
@@ -152,7 +159,13 @@ extension Plist{
     
     /**ProperTree Bin Path */
     static var properTreeBin:String{
-        if let path = Bundle.main.path(forResource: "ProperTree", ofType: "command", inDirectory: "libs/bin/ProperTree/Core"){
+        if propertree.isBinPath == true{
+            var path =  Bundle.main.resourcePath!+"/libs/bin/"
+            path += propertree.binPath
+            return path
+        }
+        
+        if let path = Bundle.main.path(forResource: "ProperTree", ofType: "py", inDirectory: "libs/bin/ProperTree/Core"){
             return "'\(path)'"
         }
         return "libs/bin/ProperTree/ProperTree.command/文件不存在"

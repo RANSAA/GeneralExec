@@ -17,7 +17,7 @@ EOF</string>
 		<key>logPath</key>
 		<string>日志自定义保存路径，如果为空则保存在/tmp/GeneralExec-&quot;App Name&quot;.log中</string>
 		<key>isBash</key>
-		<string>表示执行该程序是否需要借助Bash或者终端才能执行</string>
+		<string>表示执行该程序是否需要借助Bash或者终端才能执行。该参数会影响任务执行的参数模式。</string>
 		<key>args</key>
 		<string>二进制程序执行时附加参数</string>
 		<key>list</key>
@@ -25,7 +25,7 @@ EOF</string>
 		<key>isUseArgs</key>
 		<string>是否使用args中的参数</string>
 		<key>isUseExecPath</key>
-		<string>是否使用execPath路径</string>
+		<string>是否使用execPath路径，如果isBash=YES表示execPath会以bash -c 的模式执行。</string>
 		<key>isUseList</key>
 		<string>是否使用list任务</string>
 		<key>isLogs</key>
@@ -34,9 +34,13 @@ EOF</string>
 		<string>是否将调用的程序的输出重定向输入到log日志文件中</string>
 		<key>isAsync</key>
 		<string>是否使用异步执行任务。YES:所有任务并发执行并等待所有任务执行完毕后退出程序。 NO:所有任务依次执行，必须等待上一个任务执行完毕之后才继续执行新的的任务。所有任务执行完毕后才会退出程序。</string>
+		<key>binPath</key>
+		<string>自定义Resources/libs/bin中可执行性程序(脚本的路径)，例如: /ProperTree/Core/ProperTree.py</string>
+		<key>isBinPath</key>
+		<string>是否使用binPath</string>
 	</dict>
 	<key>execPath</key>
-	<string></string>
+	<string>/Library/Frameworks/Python.framework/Versions/Current/bin/python3</string>
 	<key>logPath</key>
 	<string></string>
 	<key>isBash</key>
@@ -44,7 +48,7 @@ EOF</string>
 	<key>isUseArgs</key>
 	<false/>
 	<key>isUseExecPath</key>
-	<false/>
+	<true/>
 	<key>isUseList</key>
 	<false/>
 	<key>isLogs</key>
@@ -53,6 +57,10 @@ EOF</string>
 	<true/>
 	<key>isAsync</key>
 	<true/>
+	<key>isBinPath</key>
+	<true/>
+	<key>binPath</key>
+	<string>/ProperTree/Core/ProperTree.py</string>
 	<key>args</key>
 	<array>
 		<string>-seek_interval</string>

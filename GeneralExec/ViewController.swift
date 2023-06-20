@@ -23,6 +23,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         log("viewDidLoad")
 
+        OpenURL.shared.isOpen = false
         // Do any additional setup after loading the view.
         DispatchQueue.global().asyncAfter(deadline: .now()+0.5){
             self.runTask()
@@ -62,6 +63,8 @@ class ViewController: NSViewController {
         }else{
             ExecTask.shared.conditionExit()
         }
+        
+//        ProperTree.shared.test()
 #elseif ProxyeeDown
         ProxyeeDown.shared.start()
 #else

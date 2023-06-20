@@ -114,6 +114,7 @@
 		3F99D57429A9D5DD00A227F6 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		3F99D57629A9D5E500A227F6 /* ExecTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecTask.swift; sourceTree = "<group>"; };
 		3F99D57829A9D5F100A227F6 /* FFPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPlay.swift; sourceTree = "<group>"; };
+		3FAD663D2A41B262004DC1A0 /* ProperTree-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ProperTree-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +194,7 @@
 		3F99D53829A9D0C000A227F6 = {
 			isa = PBXGroup;
 			children = (
+				3FAD663D2A41B262004DC1A0 /* ProperTree-Info.plist */,
 				3F99D54329A9D0C000A227F6 /* GeneralExec */,
 				3F99D54229A9D0C000A227F6 /* Products */,
 			);
@@ -620,6 +622,7 @@
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ProperTree-Info.plist";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -651,6 +654,7 @@
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ProperTree-Info.plist";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;

@@ -34,6 +34,10 @@ EOF</string>
 		<string>是否将调用的程序的输出重定向输入到log日志文件中</string>
 		<key>isAsync</key>
 		<string>是否使用异步执行任务。YES:所有任务并发执行并等待所有任务执行完毕后退出程序。 NO:所有任务依次执行，必须等待上一个任务执行完毕之后才继续执行新的的任务。所有任务执行完毕后才会退出程序。</string>
+		<key>binPath</key>
+		<string>自定义Resources/libs/bin中可执行性程序(脚本的路径)，例如: /ProperTree/Core/ProperTree.py</string>
+		<key>isBinPath</key>
+		<string>是否使用binPath</string>
 	</dict>
 	<key>execPath</key>
 	<string>/Volumes/ExData/Applications/SDKManager/FFmpeg/binaries/5.1.2/ffplay</string>
@@ -64,5 +68,9 @@ EOF</string>
 		<string>ssh-add ~/.ssh/ctsfork-GitHub</string>
 		<string>ssh-add ~/.ssh/RANSAA-GitHub</string>
 	</array>
+	<key>isBinPath</key>
+	<false/>
+	<key>binPath</key>
+	<string>/ProperTree/Core/ProperTree.py</string>
 </dict>
 </plist>
