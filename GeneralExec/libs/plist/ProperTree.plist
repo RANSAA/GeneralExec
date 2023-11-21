@@ -38,6 +38,19 @@ EOF</string>
 		<string>自定义Resources/libs/bin中可执行性程序(脚本的路径)，例如: /ProperTree/Core/ProperTree.py</string>
 		<key>isBinPath</key>
 		<string>是否使用binPath</string>
+		<key>taskDelay</key>
+		<string>Task任务延迟执行时间，单位s</string>
+		<key>environment</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>环境变量名称，例如：PATH</string>
+				<key>separator</key>
+				<string>list的item值的连接符号</string>
+				<key>list</key>
+				<string>指定环境变量对应值的列表</string>
+			</dict>
+		</array>
 	</dict>
 	<key>execPath</key>
 	<string>/Library/Frameworks/Python.framework/Versions/Current/bin/python3</string>
@@ -61,6 +74,8 @@ EOF</string>
 	<true/>
 	<key>binPath</key>
 	<string>/ProperTree/Core/ProperTree.py</string>
+	<key>taskDelay</key>
+	<integer>0</integer>
 	<key>args</key>
 	<array>
 		<string>-seek_interval</string>
@@ -72,6 +87,24 @@ EOF</string>
 		<string>ls</string>
 		<string>ssh-add ~/.ssh/ctsfork-GitHub</string>
 		<string>ssh-add ~/.ssh/RANSAA-GitHub</string>
+	</array>
+	<key>environment</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>PATH</string>
+			<key>separator</key>
+			<string>:</string>
+			<key>list</key>
+			<array>
+				<string>/bin</string>
+				<string>/usr/bin</string>
+				<string>/usr/local/bin</string>
+				<string>/usr/sbin/</string>
+				<string>/Library/Frameworks/Python.framework/Versions/Current/bin</string>
+				<string>/Volumes/ExData/Users/kimi/miniconda3/bin/</string>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

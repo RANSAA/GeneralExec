@@ -16,6 +16,21 @@ class BootTask: NSObject {
     }()
     
     func start(){
+        // 获取当前时间
+        let currentTime = DispatchTime.now()
+        // 将持续时间添加到当前时间
+        let futureTime = currentTime + DispatchTimeInterval.seconds(Plist.bootTask.taskDelay)
+        
+        log("准备执行Task任务 -> date:\(Date())")
+        DispatchQueue.global().asyncAfter(deadline: futureTime ) { [unowned self] in
+            log("开始执行Task任务 -> date:\(Date())")
+            
+            self.runTask()
+        }
+        
+    }
+    
+    private func runTask(){
         //并发执行list任务
         if Plist.targetPlist.isAsync {
             for arg in Plist.bootTask.list{

@@ -10,7 +10,7 @@ import Cocoa
 //@main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    
+    public static var didFinishLaunching = false
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         log("applicationDidFinishLaunching")
         
         
+        AppDelegate.didFinishLaunching = true
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

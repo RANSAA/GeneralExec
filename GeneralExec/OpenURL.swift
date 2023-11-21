@@ -15,6 +15,12 @@ class OpenURL: NSObject {
         return obj
     }()
     
+  
+    /**
+     表示是否通过文件打开方式启动：
+     true -> 通过文件双加或者右键打开当前程序
+     false -> 直接启动当前程序
+     */
     var isOpen = true
     
     private var _urls:[URL] = []

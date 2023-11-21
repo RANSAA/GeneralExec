@@ -30,6 +30,12 @@ extension ExecTask{
     func execTask(_ plist:Plist, _ customArgs:[String]?, _ isBefore:Bool = true){
         count += 1
         let task:Process = Process()
+        
+        //设置环境变量，使其能够访问所在路径的程序；其中以:符号分割
+        log("environment:\(plist.environment)")
+        task.environment = plist.environment
+        
+        
         var arguments:[String] = []
         
         var argc = customArgs == nil ? [] : customArgs!

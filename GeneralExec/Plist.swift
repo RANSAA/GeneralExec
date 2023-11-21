@@ -44,6 +44,11 @@ class Plist: NSObject {
         plist["binPath"] as! String
     }
     
+    //是否延迟执行Task任务
+    var taskDelay:Int{
+        plist["taskDelay"] as! Int
+    }
+    
     var logPath:String{
         if let path = plist["logPath"] as? String, !path.isEmpty && path.hasPrefix("/") {
             return path
@@ -55,6 +60,24 @@ class Plist: NSObject {
     }
     var list:[String]{
         plist["list"] as! [String]
+    }
+    
+    /**
+     环境变量
+     */
+    var environment:[String:String]{
+        var res:[String:String] = [:]
+        let envs = plist["environment"] as! [Any]
+        for item in envs {
+            let dict = item as! [String:Any]
+            let name:String = dict["name"] as! String
+            let separator:String = dict["separator"] as! String
+            let list:[String] = dict["list"] as! [String]
+            
+            res[name] = list.joined(separator: separator)
+        }
+        
+        return res
     }
     
     init(name:String){

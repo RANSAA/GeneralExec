@@ -25,9 +25,11 @@ class ViewController: NSViewController {
 
         OpenURL.shared.isOpen = false
         // Do any additional setup after loading the view.
-        DispatchQueue.global().asyncAfter(deadline: .now()+0.5){
-            self.runTask()
-        }
+//        DispatchQueue.global().asyncAfter(deadline: .now()+0.5){
+//            self.runTask()
+//        }
+        
+        delayLoad()
         
     }
 
@@ -44,9 +46,20 @@ class ViewController: NSViewController {
         self.view = view
     }
 
+    
+    /** 延迟加载 */
+    private func delayLoad(){
+        DispatchQueue.global().asyncAfter(deadline: .now()+0.1){ [unowned self] in
+            if AppDelegate.didFinishLaunching {
+                self.runTask()
+            }else{
+                delayLoad()
+            }
+        }
+    }
 
     func runTask(){
-        log("runTask")
+        log("runTask.........")
         
 #if FFPlay
         if OpenURL.shared.isOpen == false{
