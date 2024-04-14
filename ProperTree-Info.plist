@@ -5,41 +5,17 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeIconSystemGenerated</key>
-			<integer>1</integer>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>plist</string>
+			</array>
 			<key>CFBundleTypeName</key>
-			<string>plist</string>
+			<string>Plist</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
-			<string>Owner</string>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>plist</string>
-			</array>
-			<key>NSDocumentClass</key>
-			<string>NSPersistentDocument</string>
-		</dict>
-		<dict>
-			<key>CFBundleTypeIconSystemGenerated</key>
-			<integer>1</integer>
-			<key>CFBundleTypeName</key>
-			<string>plist</string>
-			<key>CFBundleTypeRole</key>
-			<string>None</string>
-			<key>LSHandlerRank</key>
 			<string>Default</string>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>plist</string>
-			</array>
-			<key>NSDocumentClass</key>
-			<string>NSDocument</string>
 		</dict>
-	</array>
-	<key>UTImportedTypeDeclarations</key>
-	<array>
-		<dict/>
 	</array>
 </dict>
 </plist>

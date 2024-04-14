@@ -16,6 +16,8 @@ EOF</string>
 		<string>二进制可执行文件地址</string>
 		<key>logPath</key>
 		<string>日志自定义保存路径，如果为空则保存在/tmp/GeneralExec-&quot;App Name&quot;.log中</string>
+		<key>logCreate</key>
+		<string>每次启动时是否创建新的日志文件， true：每次启动创建新的日志文件，false：每次启动向原有的日志文件中最加日志。</string>
 		<key>isBash</key>
 		<string>表示执行该程序是否需要借助Bash或者终端才能执行</string>
 		<key>args</key>
@@ -56,6 +58,8 @@ EOF</string>
 	<string></string>
 	<key>logPath</key>
 	<string></string>
+	<key>logCreate</key>
+	<true/>
 	<key>isBash</key>
 	<false/>
 	<key>isUseArgs</key>
@@ -86,19 +90,20 @@ EOF</string>
 	<array>
 		<string>echo &quot;BootTask.........&quot;</string>
 		<string>echo &quot;任务一：添加github私钥.............&quot;</string>
-		<string>ssh-add /Volumes/ExData/Users/kimi/.ssh/RANSAA-GitHub;
-ssh-add /Volumes/ExData/Users/kimi/.ssh/ctsfork-GitHub;
+		<string>ssh-add /Volumes/ExData/Users/kimi/.ssh/github-RANSAA;
+ssh-add /Volumes/ExData/Users/kimi/.ssh/github-ctsfork;
 ssh-add -l</string>
 		<string>echo &quot;任务二：启动AList服务...............&quot;</string>
 		<string>/Volumes/ExData/Applications/下载器/alist/script/alist-start.sh</string>
 		<string>echo &quot;启动LX Music服务............&quot;</string>
+		<string>echo &quot;启动Syncthing服务，Syncthing服务将由LX Music启动...........&quot;</string>
 		<string>/Volumes/ExData/Applications/播放器/lx-music/_start/lx-music-start.sh</string>
 	</array>
 	<key>list-test</key>
 	<array>
 		<string>echo &quot;BootTask.........&quot;</string>
-		<string>ssh-add ~/.ssh/ctsfork-GitHub</string>
-		<string>ssh-add ~/.ssh/RANSAA-GitHub</string>
+		<string>ssh-add ~/.ssh/github-RANSAA</string>
+		<string>ssh-add ~/.ssh/github-ctsfork</string>
 	</array>
 	<key>environment</key>
 	<array>

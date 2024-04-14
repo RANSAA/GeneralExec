@@ -37,6 +37,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         OpenURL.shared.urls = urls
         execTask()
     }
+    
+    func application(_ sender: NSApplication, openFiles filenames: [String]) {
+        log("openFiles:\(filenames)")
+    }
+    
+    func application(_ sender: NSApplication, openTempFile filename: String) -> Bool {
+        log("openTempFile:\(filename)")
+        
+        return true
+    }
+    
+    
+    
+    func application(_ sender: NSApplication, openFile filename: String) -> Bool {
+        // 处理打开文件的逻辑
+        log("openFile:\(filename)")
+        
+        
+        return true
+    }
+    
+
 
     
     func execTask(){
@@ -49,5 +71,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 #endif
     }
     
+
+
+
 }
 

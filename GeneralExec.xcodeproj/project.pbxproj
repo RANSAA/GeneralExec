@@ -91,12 +91,18 @@
 		3F99D57529A9D5DD00A227F6 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99D57429A9D5DD00A227F6 /* Plist.swift */; };
 		3F99D57729A9D5E500A227F6 /* ExecTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99D57629A9D5E500A227F6 /* ExecTask.swift */; };
 		3F99D57929A9D5F100A227F6 /* FFPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99D57829A9D5F100A227F6 /* FFPlay.swift */; };
+		3FEF24EE2BCBB7A200733E68 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF24ED2BCBB7A200733E68 /* Date+String.swift */; };
+		3FEF24EF2BCBB7A200733E68 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF24ED2BCBB7A200733E68 /* Date+String.swift */; };
+		3FEF24F02BCBB7A200733E68 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF24ED2BCBB7A200733E68 /* Date+String.swift */; };
+		3FEF24F12BCBB7A200733E68 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF24ED2BCBB7A200733E68 /* Date+String.swift */; };
+		3FEF24F22BCBB7A200733E68 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF24ED2BCBB7A200733E68 /* Date+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F27EE4529A9DD8600B17B84 /* libs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = libs; sourceTree = "<group>"; };
 		3F46F6D829AB3E4200F1F555 /* ProxyeeDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyeeDown.swift; sourceTree = "<group>"; };
 		3F46F6F229AB414B00F1F555 /* ProxyeeDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyeeDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F70313B2B0DDB3400ABC654 /* FFPlay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FFPlay-Info.plist"; sourceTree = "<group>"; };
 		3F7ADD2829A9E1C600416731 /* OpenURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURL.swift; sourceTree = "<group>"; };
 		3F7ADD2B29A9E8B400416731 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3F7ADD4C29AA11FF00416731 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		3F99D57629A9D5E500A227F6 /* ExecTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExecTask.swift; sourceTree = "<group>"; };
 		3F99D57829A9D5F100A227F6 /* FFPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFPlay.swift; sourceTree = "<group>"; };
 		3FAD663D2A41B262004DC1A0 /* ProperTree-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ProperTree-Info.plist"; sourceTree = "<group>"; };
+		3FEF24ED2BCBB7A200733E68 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +201,7 @@
 		3F99D53829A9D0C000A227F6 = {
 			isa = PBXGroup;
 			children = (
+				3F70313B2B0DDB3400ABC654 /* FFPlay-Info.plist */,
 				3FAD663D2A41B262004DC1A0 /* ProperTree-Info.plist */,
 				3F99D54329A9D0C000A227F6 /* GeneralExec */,
 				3F99D54229A9D0C000A227F6 /* Products */,
@@ -224,6 +232,7 @@
 				3F99D57629A9D5E500A227F6 /* ExecTask.swift */,
 				3F7ADD4C29AA11FF00416731 /* Log.swift */,
 				3F7ADD2B29A9E8B400416731 /* main.swift */,
+				3FEF24ED2BCBB7A200733E68 /* Date+String.swift */,
 				3F99D54829A9D0C500A227F6 /* Assets.xcassets */,
 				3F99D54A29A9D0C500A227F6 /* Main.storyboard */,
 				3F99D54D29A9D0C500A227F6 /* GeneralExec.entitlements */,
@@ -448,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F46F6DF29AB414B00F1F555 /* Plist.swift in Sources */,
+				3FEF24F22BCBB7A200733E68 /* Date+String.swift in Sources */,
 				3F46F6E029AB414B00F1F555 /* main.swift in Sources */,
 				3F46F6E129AB414B00F1F555 /* ExecTask.swift in Sources */,
 				3F46F6E229AB414B00F1F555 /* OpenURL.swift in Sources */,
@@ -466,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7ADD6929AA447F00416731 /* Plist.swift in Sources */,
+				3FEF24EF2BCBB7A200733E68 /* Date+String.swift in Sources */,
 				3F7ADD6A29AA447F00416731 /* main.swift in Sources */,
 				3F7ADD6B29AA447F00416731 /* ExecTask.swift in Sources */,
 				3F7ADD6C29AA447F00416731 /* OpenURL.swift in Sources */,
@@ -484,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7ADD7E29AA448C00416731 /* Plist.swift in Sources */,
+				3FEF24F02BCBB7A200733E68 /* Date+String.swift in Sources */,
 				3F7ADD7F29AA448C00416731 /* main.swift in Sources */,
 				3F7ADD8029AA448C00416731 /* ExecTask.swift in Sources */,
 				3F7ADD8129AA448C00416731 /* OpenURL.swift in Sources */,
@@ -502,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7ADD9329AA448E00416731 /* Plist.swift in Sources */,
+				3FEF24F12BCBB7A200733E68 /* Date+String.swift in Sources */,
 				3F7ADD9429AA448E00416731 /* main.swift in Sources */,
 				3F7ADD9529AA448E00416731 /* ExecTask.swift in Sources */,
 				3F7ADD9629AA448E00416731 /* OpenURL.swift in Sources */,
@@ -520,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F99D57529A9D5DD00A227F6 /* Plist.swift in Sources */,
+				3FEF24EE2BCBB7A200733E68 /* Date+String.swift in Sources */,
 				3F7ADD2C29A9E8B400416731 /* main.swift in Sources */,
 				3F99D57729A9D5E500A227F6 /* ExecTask.swift in Sources */,
 				3F7ADD2929A9E1C600416731 /* OpenURL.swift in Sources */,
@@ -748,6 +762,7 @@
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FFPlay-Info.plist";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -779,6 +794,7 @@
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FFPlay-Info.plist";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;

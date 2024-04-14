@@ -21,14 +21,10 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        log("viewDidLoad")
 
         OpenURL.shared.isOpen = false
-        // Do any additional setup after loading the view.
-//        DispatchQueue.global().asyncAfter(deadline: .now()+0.5){
-//            self.runTask()
-//        }
-        
+
+        //延迟加载，防止AppDelegate.applicationDidFinishLaunching方法还未执行完毕就执行task任务
         delayLoad()
         
     }

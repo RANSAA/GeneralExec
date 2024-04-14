@@ -12,7 +12,7 @@ import Cocoa
 
 func main(){
     print("Log日志路径: \(Plist.targetPlist.logPath)")
-    let msg = "\(Plist.bundleName):----------------start:\(Date())-------------------"
+    let msg = "\(Plist.bundleName):----------------start:\(Date.nowString)-------------------"
     log(msg)
     log("App Name:\(Plist.executableName)")
     

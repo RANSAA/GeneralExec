@@ -49,12 +49,19 @@ class Plist: NSObject {
         plist["taskDelay"] as! Int
     }
     
+    //自定义的日志路径
     var logPath:String{
         if let path = plist["logPath"] as? String, !path.isEmpty && path.hasPrefix("/") {
             return path
         }
         return "/tmp/GeneralExec-\(Plist.bundleName).log"
     }
+    
+    //每次启动是否创建新的日志文件
+    var logCreate:Bool{
+        plist["logCreate"] as! Bool
+    }
+    
     var args:[String]{
         plist["args"] as! [String]
     }
@@ -67,6 +74,24 @@ class Plist: NSObject {
      */
     var environment:[String:String]{
         var res:[String:String] = [:]
+        /**
+         设置 TERM 环境变量
+         设置为适当的终端类型，例如 xterm-256color
+         */
+        res["TERM"] = "xterm-256color"
+        /**
+         设置SSH agent 的环境变量，
+         以解决：Could not open a connection to your authentication agent. 问题。
+         */
+        res["SSH_AUTH_SOCK"] = ProcessInfo.processInfo.environment["SSH_AUTH_SOCK"] ?? ""
+        res["SSH_AGENT_PID"] = ProcessInfo.processInfo.environment["SSH_AGENT_PID"] ?? ""
+        
+        /**
+         设置HOME目录
+         */
+        res["HOME"] = ProcessInfo.processInfo.environment["HOME"] ?? "~"
+        
+        
         let envs = plist["environment"] as! [Any]
         for item in envs {
             let dict = item as! [String:Any]
@@ -76,7 +101,6 @@ class Plist: NSObject {
             
             res[name] = list.joined(separator: separator)
         }
-        
         return res
     }
     
@@ -84,6 +108,12 @@ class Plist: NSObject {
         let path = Bundle.main.path(forResource: name, ofType: "plist", inDirectory: "libs/plist")
         let plist = NSDictionary(contentsOfFile: path!)
         self.plist = plist!
+        super.init()
+        
+        //新建日志文件
+        if self.logCreate {
+            FileManager.default.createFile(atPath: logPath, contents: nil)
+        }
     }
     
     func info(){

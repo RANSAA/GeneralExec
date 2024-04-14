@@ -102,7 +102,7 @@ extension ExecTask{
         DispatchQueue.global().asyncAfter(deadline: .now()+3){
             if self.count < 1{
                 var msg = "exec任务执行完毕，退出程序！\n"
-                msg  += "\(Plist.bundleName):----------------exit:\(Date())-------------------\n\n\n"
+                msg  += "\(Plist.bundleName):----------------exit:\(Date.nowString)-------------------\n\n\n"
                 log(msg)
                 exit(0)
             }

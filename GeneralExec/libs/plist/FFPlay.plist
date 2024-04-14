@@ -16,6 +16,8 @@ EOF</string>
 		<string>二进制可执行文件地址</string>
 		<key>logPath</key>
 		<string>日志自定义保存路径，如果为空则保存在/tmp/GeneralExec-&quot;App Name&quot;.log中</string>
+		<key>logCreate</key>
+		<string>每次启动时是否创建新的日志文件， true：每次启动创建新的日志文件，false：每次启动向原有的日志文件中最加日志。</string>
 		<key>isBash</key>
 		<string>表示执行该程序是否需要借助Bash或者终端才能执行</string>
 		<key>args</key>
@@ -56,6 +58,8 @@ EOF</string>
 	<string>/Volumes/ExData/Applications/SDKManager/FFmpeg/binaries/5.1.2/ffplay</string>
 	<key>logPath</key>
 	<string></string>
+	<key>logCreate</key>
+	<true/>
 	<key>isBash</key>
 	<false/>
 	<key>isUseArgs</key>
@@ -85,8 +89,8 @@ EOF</string>
 	<key>list</key>
 	<array>
 		<string>ls</string>
-		<string>ssh-add ~/.ssh/ctsfork-GitHub</string>
-		<string>ssh-add ~/.ssh/RANSAA-GitHub</string>
+		<string>ssh-add ~/.ssh/github-RANSAA</string>
+		<string>ssh-add ~/.ssh/github-ctsfork</string>
 	</array>
 	<key>environment</key>
 	<array>
